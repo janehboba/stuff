@@ -6,6 +6,14 @@
     <title>Booz Allen Hamilton: Executive Strategic Overview</title>
     <style>
         /* CSS is embedded here for a single-file solution */
+        
+        /* BRAND COLORS: 
+           Primary Blue (BAH Corporate): #004f99 
+           Accent Blue: #007bff (Used for hover/subtle highlights)
+           Success Green: #27ae60 
+           Warning Red: #e74c3c 
+        */
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -19,11 +27,11 @@
             background: #fff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow for executive feel */
         }
         h1 {
-            color: #007bff; /* Booz Allen Blue */
-            border-bottom: 3px solid #007bff;
+            color: #004f99; /* Primary Blue */
+            border-bottom: 3px solid #004f99;
             padding-bottom: 10px;
             margin-bottom: 25px;
             font-weight: 300;
@@ -32,9 +40,11 @@
             color: #2c3e50;
             font-size: 1.5em;
             margin-top: 30px;
-            border-left: 5px solid #007bff;
+            border-left: 5px solid #004f99; /* Primary Blue accent */
             padding-left: 10px;
+            font-weight: 600;
         }
+        
         /* Tab Navigation Styling */
         .tab-nav {
             display: flex;
@@ -52,20 +62,21 @@
             margin-right: 5px;
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
             font-weight: 600;
+            white-space: nowrap;
         }
         .tab-nav li:hover {
-            background-color: #eee;
+            background-color: #e0e0e0;
         }
         .tab-nav li.active {
-            background-color: #007bff;
+            background-color: #004f99; /* Primary Blue */
             color: white;
-            border-color: #007bff;
+            border-color: #004f99;
             border-bottom: 2px solid #fff;
         }
         .tab-content {
-            padding: 20px;
+            padding: 25px;
             border: 1px solid #ccc;
             border-top: none;
             border-radius: 0 0 6px 6px;
@@ -79,14 +90,11 @@
         }
 
         /* Data Presentation */
-        .key-people, .financial-data, .swo-competitor, .key-events, .stability-index {
-            margin-bottom: 20px;
-        }
         .key-person {
             margin-bottom: 15px;
             padding: 10px;
-            border-left: 3px solid #007bff;
-            background-color: #e9f7ff;
+            border-left: 3px solid #004f99; /* Primary Blue accent */
+            background-color: #f0f8ff; /* Very light blue background */
             border-radius: 4px;
         }
         .financial-table, .comp-table {
@@ -97,16 +105,17 @@
         .financial-table th, .financial-table td,
         .comp-table th, .comp-table td {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 12px;
             text-align: left;
         }
         .financial-table th, .comp-table th {
-            background-color: #007bff;
+            background-color: #004f99; /* Primary Blue header */
             color: white;
-            font-weight: 600;
+            font-weight: 700;
+            text-transform: uppercase;
         }
         .metric-cell {
-            background-color: #f2f2f2;
+            background-color: #f9f9f9;
         }
         .org-stability {
             display: flex;
@@ -119,21 +128,18 @@
             border-radius: 6px;
         }
         .stability-score {
-            font-size: 2.5em;
+            font-size: 2.8em; /* Slightly larger for impact */
             font-weight: bold;
-            color: #27ae60; /* Green for stability */
+            color: #27ae60; /* Success Green */
             display: block;
             margin-top: 5px;
         }
         .competitor-list {
-            list-style: none;
-            padding: 0;
+            list-style: disc;
+            padding-left: 20px;
         }
         .competitor-list li {
-            background-color: #ecf0f1;
-            margin-bottom: 5px;
-            padding: 8px;
-            border-radius: 4px;
+            margin-bottom: 8px;
         }
         .strength { color: #27ae60; font-weight: bold; }
         .weakness { color: #e74c3c; font-weight: bold; }
@@ -155,21 +161,21 @@
         <div class="tab-content">
             <div id="org-structure" class="tab-pane active">
                 <h2>Organizational Structure & Reorganizations</h2>
-                <p><strong>Note:</strong> Booz Allen's structure is broadly organized by **Market (e.g., Defense, National Security, Civil)** and **Functional/Tech Capability (e.g., Cyber, AI, Engineering)**, often leveraging a matrix organization to bring capability teams to market sectors.</p>
+                <p><strong>Note:</strong> Booz Allen operates with a matrix organization, structuring around key **Markets (Defense, National Security, Civil)** and integrating specialized **Functional/Technology Capabilities (Cyber, AI, Engineering)** across those markets.</p>
                 <div style="text-align: center; margin: 20px 0;">
-                    
-                    <p style="font-style: italic; margin-top: 10px;">Simplified Visual Hierarchy (Replace with a formal Visio/Lucidchart diagram for presentation)</p>
+                    <img src="placeholder_org_chart.png" alt="Placeholder for Booz Allen Hamilton Organizational Chart" style="width: 100%; max-width: 800px; border: 1px solid #ccc; padding: 10px; background: #fff;">
+                    <p style="font-style: italic; margin-top: 10px;">Simplified Visual Hierarchy (Replace the image source with a high-resolution, branded organizational diagram for final presentation.)</p>
                 </div>
                 <h3>Recent Reorganizations & Strategic Shifts</h3>
                 <ul>
-                    <li><strong>Continuous Shift to Solutions/Technology Focus:</strong> Ongoing reorganization to emphasize **Artificial Intelligence, Cyber, and Digital Engineering** as core offerings, moving beyond traditional pure consulting/staff augmentation. This is reflected in the creation/elevation of technology-focused leadership roles.</li>
-                    <li><strong>Global Headquarters Relocation (2027 Projected):</strong> Announced relocation of Global HQ from McLean to **Reston, Virginia**. This move is positioned as a strategic shift to an "innovative, optimized" facility that supports advanced technology capabilities and rightsizes the facilities footprint.</li>
-                    <li><strong>Acquisitions-Driven Integration:</strong> Reorganizations often follow key acquisitions (e.g., EverWatch, PGSC) to integrate new, specialized technology capabilities into the Defense and National Security sectors.</li>
+                    <li><strong>Continuous Shift to Solutions/Technology Focus:</strong> Ongoing organizational alignment to emphasize **Artificial Intelligence, Cyber, and Digital Engineering** as core, high-growth offerings (part of the VoC strategy).</li>
+                    <li><strong>Global Headquarters Relocation (2027 Projected):</strong> Strategic move of Global HQ from McLean to **Reston, Virginia**, designed to optimize facilities and foster next-generation technology work environments.</li>
+                    <li><strong>Acquisitions-Driven Integration:</strong> Integration of key acquisitions (e.g., EverWatch) to strategically consolidate and expand high-value **National Security** and cyber capabilities.</li>
                 </ul>
             </div>
 
             <div id="key-personnel" class="tab-pane">
-                <h2>Key Personnel & Executive Leadership (FY24/25)</h2>
+                <h2>Key Personnel & Executive Leadership (Current)</h2>
                 <div class="key-person">
                     <strong>Horacio Rozanski</strong>: Chairman, Chief Executive Officer, and President.
                 </div>
@@ -247,23 +253,23 @@
                     <div>
                         <h3>Booz Allen Hamilton OSI (Internal Score)</h3>
                         <span class="stability-score">8.5 / 10</span>
-                        <p><strong>Rationale:</strong> High executive tenure (Rozanski since 2014), strong pipeline ($12B+ RPO), but a slight reduction due to a major HQ relocation announcement and competitive contract protest activity.</p>
+                        <p><strong>Rationale:</strong> High executive tenure and robust Remaining Performance Obligations (RPO), balanced against the inherent complexity of navigating major federal budget shifts and competitive protests.</p>
                     </div>
                     <div>
                         <h3>Competitor Comparison (Simulated OSI)</h3>
                         <ul class="competitor-list">
-                            <li><strong>Leidos:</strong> 7.8/10 (High Revenue, but continuous large M&A integrations can introduce short-term instability.)</li>
-                            <li><strong>SAIC:</strong> 7.0/10 (Recent M&A activity and potential contract shifts add minor volatility.)</li>
-                            <li><strong>CACI:</strong> 8.2/10 (Strong contract wins (e.g., NSA FocusedFox) and technology focus provide solid stability.)</li>
+                            <li><strong>Leidos:</strong> 7.8/10 (Large, often M&A-driven scale introduces integration volatility.)</li>
+                            <li><strong>SAIC:</strong> 7.0/10 (Recent portfolio shifts and contract losses/wins create higher instability.)</li>
+                            <li><strong>CACI:</strong> 8.2/10 (Strong performance and focused technology/product wins provide significant internal stability.)</li>
                         </ul>
                     </div>
                 </div>
 
                 <h2 style="margin-top: 40px;">Key Events (Last 3 Years)</h2>
                 <ul>
-                    <li><strong>Acquisition of EverWatch (2022):</strong> Significant move to bolster **National Security** capabilities, particularly in cyber and intelligence services, successfully clearing a DOJ antitrust challenge.</li>
-                    <li><strong>NSA FocusedFox Contract Protest (2023):</strong> BAH and Leidos protested the $2.4B NSA contract awarded to CACI, highlighting intense competition for major, high-value intelligence community work.</li>
-                    <li><strong>Strategic Shift to Velocity/VoC:</strong> Continued emphasis on the **Velocity/Value of Content (VoC)** business strategy to accelerate growth in high-demand, advanced technology services (AI, 5G, Cyber).</li>
+                    <li><strong>Acquisition of EverWatch (2022):</strong> Significant move to bolster **National Security** capabilities, successfully concluding a contentious DOJ antitrust review.</li>
+                    <li><strong>NSA FocusedFox Contract Protest (2023):</strong> BAH protested the $2.4B NSA contract awarded to CACI, underscoring fierce competition and commitment to retaining critical Intelligence Community market share.</li>
+                    <li><strong>Global HQ Relocation Announcement (2025/2027):</strong> Major commitment to modernizing physical infrastructure to support advanced tech workforce and capabilities.</li>
                 </ul>
             </div>
 
@@ -283,16 +289,16 @@
                             <td class="strength">STRENGTHS</td>
                             <td>
                                 <ul>
-                                    <li><strong class="strength">Deep Government Penetration:</strong> Decades-long, deep relationships across **all US Intelligence and Defense agencies**.</li>
-                                    <li><strong class="strength">Technology Leadership:</strong> Recognized lead in **Cybersecurity and AI/Data Science** solutions tailored for government mission-critical needs.</li>
-                                    <li><strong class="strength">Talent Base:</strong> Reputation for high number of personnel with top-tier security clearances (**TS/SCI**).</li>
+                                    <li><strong class="strength">Deep Government Penetration:</strong> Decades-long, trusted relationships across **all US Intelligence and Defense agencies**.</li>
+                                    <li><strong class="strength">Technology Leadership:</strong> Recognized lead in mission-critical **Cybersecurity and AI/Data Science** solutions.</li>
+                                    <li><strong class="strength">Talent Base:</strong> Superior reputation for cleared personnel (high volume of **TS/SCI** clearances).</li>
                                 </ul>
                             </td>
                             <td>
                                 <ul>
-                                    <li><strong>Leidos:</strong> Greater scale in large IT infrastructure/hardware integration (closer to a traditional defense contractor).</li>
-                                    <li><strong>CACI:</strong> Exceptional agility and focus on proprietary technology/products, particularly in the Intelligence community.</li>
-                                    <li><strong>SAIC:</strong> Strong presence in logistics, platform integration, and broader IT modernization.</li>
+                                    <li><strong>Leidos:</strong> Greater scale in large IT infrastructure, hardware integration, and broader contract value.</li>
+                                    <li><strong>CACI:</strong> Highly focused and successful in providing proprietary, high-margin technology/products.</li>
+                                    <li><strong>SAIC:</strong> Strong presence in logistics and platform integration, offering different diversification risk.</li>
                                 </ul>
                             </td>
                         </tr>
@@ -300,14 +306,14 @@
                             <td class="weakness">WEAKNESSES</td>
                             <td>
                                 <ul>
-                                    <li><strong class="weakness">Revenue Concentration:</strong> Heavily reliant on the **U.S. Federal Government** (near 97% of revenue), making it highly sensitive to budget cycles and legislative changes.</li>
-                                    <li><strong class="weakness">Consulting Legacy:</strong> Historically perceived as a "staff augmentation" firm, despite the strong pivot to technology, which can hinder competition with pure-play tech integrators.</li>
+                                    <li><strong class="weakness">Revenue Concentration:</strong> Extremely reliant on the **U.S. Federal Government** (~97% of revenue), making it highly sensitive to budget cycles and political shifts.</li>
+                                    <li><strong class="weakness">Legacy Perception:</strong> Still contends with the perception of a "consulting" firm despite the pivot to technology, creating competitive friction with pure-play integrators.</li>
                                 </ul>
                             </td>
                             <td>
                                 <ul>
-                                    <li><strong>Leidos/SAIC:</strong> More diversified revenue streams outside of core Defense/Intelligence (e.g., Leidos in Civil/Health IT, SAIC in broader IT).</li>
-                                    <li><strong>All:</strong> All competitors face similar **talent and wage inflation** challenges in the cleared personnel market.</li>
+                                    <li><strong>Leidos/SAIC:</strong> More diversified revenue streams outside of core Defense/Intelligence (e.g., Civil, Health IT).</li>
+                                    <li><strong>All:</strong> All key competitors face similar acute challenges in recruiting and retaining top-tier cleared technical talent.</li>
                                 </ul>
                             </td>
                         </tr>
@@ -329,6 +335,7 @@
             }
 
             // Get all elements with class="tab-nav li" and remove the class "active"
+            // Note: Targeting the immediate children of the tab-nav class
             tablinks = document.getElementsByClassName("tab-nav")[0].getElementsByTagName("li");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");

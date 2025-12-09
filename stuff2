@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booz Allen Hamilton Deep Dive</title>
     <style>
+        /* Define BAH Corporate Colors */
+        :root {
+            --bah-navy: #004A77; /* Deep Navy Blue */
+            --bah-red: #CC0000;  /* Strong Accent Red */
+            --bah-light-blue: #f0f3f7; /* Light background */
+            --bah-text: #333333;
+            --bah-border: #e0e0e0;
+        }
+
         /* General Styles */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f0f3f7; /* Light gray-blue background */
+            color: var(--bah-text);
+            background-color: var(--bah-light-blue);
             margin: 0;
             padding: 0;
         }
@@ -20,47 +29,48 @@
             max-width: 1100px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
             border-radius: 8px;
         }
 
         /* Typography */
         h1 {
-            color: #004A77; /* Deep Blue */
+            color: var(--bah-navy);
             text-align: center;
             padding-bottom: 15px;
             margin-bottom: 30px;
-            border-bottom: 3px solid #CC0000; /* Red accent line */
-            font-size: 2.2em;
+            border-bottom: 4px solid var(--bah-red); /* Thick Red accent line */
+            font-size: 2.4em;
+            text-transform: uppercase;
         }
         h2 {
-            color: #CC0000; /* Primary Accent Red */
-            border-bottom: 1px dashed #ccc;
+            color: var(--bah-navy);
+            border-bottom: 1px dashed var(--bah-red);
             padding-bottom: 10px;
             margin-top: 25px;
-            font-size: 1.6em;
+            font-size: 1.8em;
         }
 
         /* Section Cards */
         .section {
             margin-bottom: 35px;
             padding: 20px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--bah-border);
             border-radius: 6px;
             background-color: #ffffff;
             transition: box-shadow 0.3s ease;
         }
         .section:hover {
-            box-shadow: 0 6px 15px rgba(0, 74, 119, 0.1); /* Subtle blue hover effect */
+            box-shadow: 0 6px 15px rgba(0, 74, 119, 0.2); /* Navy hover effect */
         }
 
         /* Key Points & Lists */
         .key-point {
             font-weight: bold;
-            color: #004A77; /* Deep Blue for emphasis */
+            color: var(--bah-red); /* Red for direct emphasis */
             font-size: 1.1em;
-            display: block; /* Make it stand out on its own line */
+            display: block;
             margin-bottom: 5px;
         }
 
@@ -74,8 +84,8 @@
             position: relative;
         }
         ul li::before {
-            content: "•"; /* Bullet icon */
-            color: #CC0000;
+            content: "•";
+            color: var(--bah-red); /* Red bullets */
             font-weight: bold;
             display: inline-block;
             width: 1em;
@@ -87,15 +97,15 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
         th, td {
-            border: 1px solid #e0e0e0;
+            border: 1px solid var(--bah-border);
             padding: 12px 15px;
             text-align: left;
         }
         th {
-            background-color: #004A77;
+            background-color: var(--bah-navy); /* Navy Blue Header */
             color: white;
             font-weight: 600;
             text-transform: uppercase;
@@ -103,11 +113,12 @@
         tr:nth-child(even) {
             background-color: #f8f8f8;
         }
-
-        /* Icons/Emojis for Headings */
+        
+        /* Icons */
         .icon {
             margin-right: 10px;
-            font-size: 1.2em;
+            font-size: 1.4em;
+            color: var(--bah-red); /* Red icons for visibility */
         }
     </style>
 </head>
@@ -116,7 +127,7 @@
 <div class="container">
 
     <h1><span class="icon">💻</span> Booz Allen Hamilton Deep Dive: Strategy & Mission</h1>
-    <p style="text-align: center; font-style: italic; color: #555;">Leading the transformation of the U.S. government's defense, intelligence, and civilian missions through technology.</p>
+    <p style="text-align: center; font-style: italic; color: #555;">Focused on delivering **mission-critical technology** and **consulting services** to the U.S. Federal Government.</p>
 
     <div class="section">
         <h2><span class="icon">🏛️</span> 1. Organization Structure: Sector-Based Focus</h2>
@@ -126,7 +137,7 @@
             <tr>
                 <th>Sector</th>
                 <th>Primary Clients</th>
-                <th>Focus Area</th>
+                <th>Core Focus</th>
             </tr>
             <tr>
                 <td><strong>National Security</strong></td>

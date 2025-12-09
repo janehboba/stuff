@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booz Allen Hamilton vs. SAIC: Strategic Analysis</title>
+    <title>Booz Allen Hamilton vs. SAIC: Master Strategic Report</title>
     <style>
         :root {
             --bah-green: #008E5B;
@@ -44,12 +44,12 @@
 
         header h1 {
             margin: 0;
-            font-size: 2.8em;
+            font-size: 2.5em;
             letter-spacing: 1px;
         }
 
         header .subtitle {
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: 300;
             margin-top: 10px;
             color: var(--bah-green);
@@ -237,6 +237,57 @@
             border: 1px solid #c8e6c9;
         }
 
+        /* ORG CHART VISUALIZATION */
+        .org-chart-section {
+            padding: 40px;
+            background: #fff;
+            border-top: 1px solid #ddd;
+        }
+
+        .org-container {
+            display: flex; 
+            gap: 40px; 
+            flex-wrap: wrap; 
+            justify-content: center;
+        }
+
+        .org-col {
+            flex: 1; 
+            min-width: 350px;
+        }
+
+        .org-node {
+            border-radius: 8px; 
+            padding: 15px; 
+            text-align: center; 
+            width: 80%; 
+            margin: 0 auto; 
+            position: relative;
+        }
+
+        .org-connector {
+            width: 80%; 
+            height: 2px; 
+            margin: 20px auto 0 auto; 
+            position: relative;
+        }
+
+        .org-child-row {
+            display: flex; 
+            justify-content: space-between; 
+            margin-top: 15px;
+        }
+
+        .org-child {
+            width: 30%; 
+            background: white; 
+            border-radius: 5px; 
+            padding: 10px; 
+            text-align: center; 
+            font-size: 0.85em; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
         /* COMPARATIVE SECTION STYLES */
         .comparative-section {
             margin-top: 0;
@@ -359,6 +410,7 @@
             .dd-cols { flex-direction: column; }
             .comp-container { flex-direction: column; }
             .vs-badge { margin: 10px 0; }
+            .org-container { flex-direction: column; }
         }
     </style>
 </head>
@@ -504,6 +556,90 @@
                         <li>Organic Growth: <strong>11.6%</strong> (Industry Leader)</li>
                         <li>Workforce: <strong>~35,800</strong> Employees</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="org-chart-section">
+        <h2 class="section-header" style="text-align: center;">Organization Structure Comparison</h2>
+        
+        <div class="org-container">
+
+            <div class="org-col">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span style="background: var(--bah-green); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold;">Booz Allen Hamilton (Stable)</span>
+                </div>
+                
+                <div class="org-node" style="border: 2px solid var(--bah-green); background: #f1f8e9;">
+                    <strong>Horacio Rozanski</strong><br>
+                    <span style="font-size: 0.8em; color: #555;">CEO (10+ Years)</span>
+                    <div style="position: absolute; bottom: -20px; left: 50%; width: 2px; height: 20px; background: var(--bah-green);"></div>
+                </div>
+
+                <div class="org-connector" style="background: var(--bah-green);">
+                    <div style="position: absolute; top: 0; left: 16%; width: 2px; height: 15px; background: var(--bah-green);"></div>
+                    <div style="position: absolute; top: 0; left: 50%; width: 2px; height: 15px; background: var(--bah-green);"></div>
+                    <div style="position: absolute; top: 0; left: 84%; width: 2px; height: 15px; background: var(--bah-green);"></div>
+                </div>
+
+                <div class="org-child-row">
+                    <div class="org-child" style="border: 1px solid var(--bah-green);">
+                        <strong style="color: var(--bah-green);">Civil</strong><br>
+                        <span style="font-size: 0.85em; color: #666;">Richard Crowe</span>
+                    </div>
+                    <div class="org-child" style="border: 1px solid var(--bah-green);">
+                        <strong style="color: var(--bah-green);">Defense</strong><br>
+                        <span style="font-size: 0.85em; color: #666;">Andrea Inserra</span>
+                    </div>
+                    <div class="org-child" style="border: 1px solid var(--bah-green);">
+                        <strong style="color: var(--bah-green);">NatSec</strong><br>
+                        <span style="font-size: 0.85em; color: #666;">Tom Pfeifer</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; border: 1px dashed #999; border-radius: 5px; padding: 10px; text-align: center; background: #fafafa; position: relative;">
+                    <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: white; padding: 0 5px; color: #777; font-size: 0.8em;">Horizontal Enablers</span>
+                    <strong style="font-size: 0.9em; color: #444;">Booz Allen Ventures & Tech Groups</strong>
+                </div>
+            </div>
+
+            <div style="width: 1px; background: #ddd; align-self: stretch;"></div>
+
+            <div class="org-col">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span style="background: var(--saic-blue); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold;">SAIC (2026 Structure)</span>
+                </div>
+                
+                <div class="org-node" style="border: 2px solid var(--saic-blue); background: #e3f2fd;">
+                    <strong>Jim Reagan</strong><br>
+                    <span style="font-size: 0.8em; color: #555;">Interim CEO</span>
+                    <div style="position: absolute; bottom: -20px; left: 50%; width: 2px; height: 20px; background: var(--saic-blue);"></div>
+                </div>
+
+                <div class="org-connector" style="background: var(--saic-blue);">
+                    <div style="position: absolute; top: 0; left: 16%; width: 2px; height: 15px; background: var(--saic-blue);"></div>
+                    <div style="position: absolute; top: 0; left: 50%; width: 2px; height: 15px; background: var(--saic-blue);"></div>
+                    <div style="position: absolute; top: 0; left: 84%; width: 2px; height: 15px; background: var(--saic-blue);"></div>
+                </div>
+
+                <div class="org-child-row">
+                    <div class="org-child" style="border: 1px solid var(--saic-blue);">
+                        <strong style="color: var(--saic-blue);">ANG</strong><br>
+                        <span style="font-size: 0.75em; color: #666;">Army & Navy<br>Supplee</span>
+                    </div>
+                    <div class="org-child" style="border: 1px solid var(--saic-blue);">
+                        <strong style="color: var(--saic-blue);">AFSI</strong><br>
+                        <span style="font-size: 0.75em; color: #666;">Space/Intel<br>DiFronzo</span>
+                    </div>
+                    <div class="org-child" style="border: 1px solid var(--saic-blue);">
+                        <strong style="color: var(--saic-blue);">Civilian</strong><br>
+                        <span style="font-size: 0.75em; color: #666;">Federal Civ<br>Attili</span>
+                    </div>
+                </div>
+
+                 <div style="margin-top: 20px; border: 1px solid #ffccbc; border-radius: 5px; padding: 10px; text-align: center; background: #fff3e0; color: #d84315; font-size: 0.8em;">
+                    <em><strong>Note:</strong> Effective Jan 31, 2026. Consolidates 5 groups back into 3.</em>
                 </div>
             </div>
         </div>

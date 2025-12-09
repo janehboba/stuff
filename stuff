@@ -57,15 +57,67 @@
             <h2 class="section-heading text-3xl font-semibold pl-4 mb-6 text-white">
                 Organizational Structure & Reorganizations
             </h2>
-            <p class="mb-4 text-slate-300">
-                Booz Allen operates with a **matrix organization**, structured around key **Markets** (Defense, National Security, Civil) and specialized **Technology/Functional Capabilities** (Cyber, AI, Engineering) to maximize cross-sector delivery.
+            <p class="mb-6 text-slate-300 text-lg">
+                Booz Allen operates with a **matrix organization**, structured around key **Markets** (e.g., Defense) and specialized **Technology Capabilities** (e.g., AI) to maximize cross-sector delivery and innovation.
             </p>
-            <div class="bg-slate-700/50 p-6 rounded-lg text-center">
-                <div class="text-xl font-medium text-[var(--color-accent)] mb-2">Organizational Chart Placeholder</div>
-                <div class="h-64 border-2 border-dashed border-slate-500 flex items-center justify-center text-slate-400">
-                    
+            
+            <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 overflow-x-auto mb-8">
+                <div class="flex flex-col items-center text-sm min-w-[700px]">
+                    <div class="flex flex-col items-center mb-4 relative z-10">
+                        <div class="bg-[var(--color-primary)] text-white px-8 py-4 rounded-lg shadow-lg font-bold text-lg border-2 border-blue-400 tracking-wider">
+                            Office of the CEO & Leadership Team
+                        </div>
+                        <div class="h-8 w-0.5 bg-slate-500"></div> </div>
+
+                    <div class="flex justify-center w-full relative">
+                         <div class="absolute top-0 left-[20%] right-[20%] h-0.5 bg-slate-500 -translate-y-full"></div>
+
+                        <div class="flex flex-col items-center mx-8 relative">
+                            <div class="h-8 w-0.5 bg-slate-500 absolute -top-8"></div> <div class="bg-slate-700 text-[var(--color-accent)] px-6 py-3 rounded-md shadow-md mb-6 font-semibold text-base border border-slate-600">
+                                Market Sectors (Client Focus)
+                            </div>
+                            <div class="flex space-x-6 relative">
+                                <div class="absolute -top-4 left-6 right-6 h-0.5 bg-slate-500"></div>
+                                
+                                <div class="flex flex-col items-center relative group">
+                                     <div class="h-4 w-0.5 bg-slate-500 absolute -top-4 group-hover:bg-[var(--color-accent)] transition-colors"></div>
+                                     <div class="bg-slate-600 text-slate-100 px-4 py-3 rounded shadow-sm font-medium border border-slate-500 group-hover:border-[var(--color-accent)] transition-colors">Defense</div>
+                                </div>
+                                <div class="flex flex-col items-center relative group">
+                                     <div class="h-4 w-0.5 bg-slate-500 absolute -top-4 group-hover:bg-[var(--color-accent)] transition-colors"></div>
+                                     <div class="bg-slate-600 text-slate-100 px-4 py-3 rounded shadow-sm font-medium border border-slate-500 group-hover:border-[var(--color-accent)] transition-colors">National Security</div>
+                                </div>
+                                <div class="flex flex-col items-center relative group">
+                                     <div class="h-4 w-0.5 bg-slate-500 absolute -top-4 group-hover:bg-[var(--color-accent)] transition-colors"></div>
+                                     <div class="bg-slate-600 text-slate-100 px-4 py-3 rounded shadow-sm font-medium border border-slate-500 group-hover:border-[var(--color-accent)] transition-colors">Civil Sector</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center mx-8 relative">
+                            <div class="h-8 w-0.5 bg-slate-500 absolute -top-8"></div> <div class="bg-slate-700 text-[var(--color-success)] px-6 py-3 rounded-md shadow-md mb-6 font-semibold text-base border border-slate-600">
+                                Capabilities (Tech & Talent)
+                            </div>
+                            <div class="flex space-x-6 relative">
+                                 <div class="absolute -top-4 left-6 right-6 h-0.5 bg-slate-500"></div>
+
+                                <div class="flex flex-col items-center relative group">
+                                     <div class="h-4 w-0.5 bg-slate-500 absolute -top-4 group-hover:bg-[var(--color-success)] transition-colors"></div>
+                                     <div class="bg-slate-600 text-slate-100 px-4 py-3 rounded shadow-sm font-medium border border-slate-500 group-hover:border-[var(--color-success)] transition-colors">AI & Data Science</div>
+                                </div>
+                                <div class="flex flex-col items-center relative group">
+                                     <div class="h-4 w-0.5 bg-slate-500 absolute -top-4 group-hover:bg-[var(--color-success)] transition-colors"></div>
+                                     <div class="bg-slate-600 text-slate-100 px-4 py-3 rounded shadow-sm font-medium border border-slate-500 group-hover:border-[var(--color-success)] transition-colors">Cyber & Physical</div>
+                                </div>
+                                <div class="flex flex-col items-center relative group">
+                                     <div class="h-4 w-0.5 bg-slate-500 absolute -top-4 group-hover:bg-[var(--color-success)] transition-colors"></div>
+                                     <div class="bg-slate-600 text-slate-100 px-4 py-3 rounded shadow-sm font-medium border border-slate-500 group-hover:border-[var(--color-success)] transition-colors">Digital Engineering</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-8 text-sm italic text-slate-400">Matrix Execution View: Market sectors leverage specialized capability teams to deliver mission solutions.</p>
                 </div>
-                <p class="mt-4 text-sm italic text-slate-400">Replace this area with a formal high-resolution organizational diagram (e.g., Visio/Lucidchart output).</p>
             </div>
             <h3 class="text-xl font-medium mt-6 mb-3 text-white">Recent Strategic Shifts</h3>
             <ul class="list-disc list-inside space-y-2 text-slate-300 ml-4">
@@ -80,27 +132,27 @@
                 Key Personnel & Executive Leadership
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)]">
+                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)] hover:bg-slate-600 transition-colors">
                     <div class="text-lg font-bold text-[var(--color-accent)]">Horacio Rozanski</div>
                     <div class="text-slate-400">Chairman, Chief Executive Officer, and President.</div>
                 </div>
-                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)]">
+                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)] hover:bg-slate-600 transition-colors">
                     <div class="text-lg font-bold text-[var(--color-accent)]">Kristine Martin Anderson</div>
                     <div class="text-slate-400">Chief Operating Officer (COO).</div>
                 </div>
-                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)]">
+                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)] hover:bg-slate-600 transition-colors">
                     <div class="text-lg font-bold text-[var(--color-accent)]">Matt Calderone</div>
                     <div class="text-slate-400">Chief Financial Officer (CFO).</div>
                 </div>
-                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)]">
+                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)] hover:bg-slate-600 transition-colors">
                     <div class="text-lg font-bold text-[var(--color-accent)]">Tom Pfeifer</div>
                     <div class="text-slate-400">President, National Security Sector.</div>
                 </div>
-                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)]">
+                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)] hover:bg-slate-600 transition-colors">
                     <div class="text-lg font-bold text-[var(--color-accent)]">Andrea Inserra</div>
                     <div class="text-slate-400">President, Global Defense Sector.</div>
                 </div>
-                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)]">
+                <div class="bg-slate-700 p-4 rounded-lg border-l-4 border-[var(--color-primary)] hover:bg-slate-600 transition-colors">
                     <div class="text-lg font-bold text-[var(--color-accent)]">Bill Vass</div>
                     <div class="text-slate-400">Chief Technology Officer (CTO).</div>
                 </div>
@@ -112,7 +164,7 @@
                 Financial Overview & Competitive Revenue
             </h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="bg-slate-700 p-6 rounded-lg shadow-xl **h-96**"> 
+                <div class="bg-slate-700 p-6 rounded-lg shadow-xl h-96"> 
                     <h3 class="text-xl font-medium mb-4 text-white">FY24 Revenue Comparison (in Billions)</h3>
                     <canvas id="revenueChart"></canvas>
                 </div>
@@ -130,21 +182,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b border-slate-600 hover:bg-slate-600">
+                            <tr class="border-b border-slate-600 hover:bg-slate-600 transition-colors">
                                 <td class="py-3 px-4 font-medium text-slate-300">Revenue (B)</td>
-                                <td class="py-3 px-4 text-white">$10.7</td>
+                                <td class="py-3 px-4 text-white font-bold">$10.7</td>
                                 <td class="py-3 px-4">$7.38</td>
                                 <td class="py-3 px-4">$15.44</td>
                                 <td class="py-3 px-4">$6.8</td>
                             </tr>
-                            <tr class="border-b border-slate-600 hover:bg-slate-600">
+                            <tr class="border-b border-slate-600 hover:bg-slate-600 transition-colors">
                                 <td class="py-3 px-4 font-medium text-slate-300">Operating Income (B)</td>
                                 <td class="py-3 px-4 text-white">$1.01</td>
                                 <td class="py-3 px-4">$0.45</td>
                                 <td class="py-3 px-4">$1.52</td>
                                 <td class="py-3 px-4">$0.77</td>
                             </tr>
-                            <tr class="border-b border-slate-600 hover:bg-slate-600">
+                            <tr class="border-b border-slate-600 hover:bg-slate-600 transition-colors">
                                 <td class="py-3 px-4 font-medium text-slate-300">Headcount (K)</td>
                                 <td class="py-3 px-4 text-white">34.2</td>
                                 <td class="py-3 px-4">25.0</td>
@@ -170,9 +222,9 @@
                 <div class="bg-slate-700 p-6 rounded-lg shadow-xl border-t-4 border-slate-400 col-span-2">
                     <h3 class="text-xl font-medium mb-3 text-white">Competitor Comparison (Simulated OSI / Key Events)</h3>
                     <ul class="space-y-3 text-slate-300">
-                        <li>**CACI (8.2):** Strong stability driven by focused product and technology wins (e.g., NSA FocusedFox).</li>
-                        <li>**Leidos (7.8):** Large scale offers stability, but continuous large M&A integrations introduce volatility.</li>
-                        <li>**SAIC (7.0):** Higher volatility due to recent portfolio shifts and changes in large platform contracts.</li>
+                        <li class="flex items-start"><span class="text-[var(--color-accent)] mr-2">►</span> **CACI (8.2):** Strong stability driven by focused product and technology wins (e.g., NSA FocusedFox).</li>
+                        <li class="flex items-start"><span class="text-slate-500 mr-2">►</span> **Leidos (7.8):** Large scale offers stability, but continuous large M&A integrations introduce volatility.</li>
+                        <li class="flex items-start"><span class="text-slate-500 mr-2">►</span> **SAIC (7.0):** Higher volatility due to recent portfolio shifts and changes in large platform contracts.</li>
                     </ul>
                 </div>
             </div>
@@ -193,16 +245,16 @@
                     <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">Booz Allen Hamilton</h3>
                     <div class="space-y-4">
                         <div>
-                            <span class="text-lg font-bold text-[var(--color-success)]">STRENGTHS</span>
-                            <ul class="list-disc list-inside ml-4 mt-1 text-slate-300 space-y-1">
+                            <span class="text-lg font-bold text-[var(--color-success)] flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg> STRENGTHS</span>
+                            <ul class="list-disc list-inside ml-6 mt-2 text-slate-300 space-y-1">
                                 <li>**Deepest Gov't Penetration:** Trusted relationships across **all US Intelligence and Defense agencies**.</li>
                                 <li>**Tech Leadership:** Recognized lead in mission-critical **Cybersecurity and AI/Data Science** solutions.</li>
                                 <li>**Cleared Talent:** Superior reputation for highly-cleared personnel (**TS/SCI**).</li>
                             </ul>
                         </div>
                         <div>
-                            <span class="text-lg font-bold text-[var(--color-warning)]">WEAKNESSES</span>
-                            <ul class="list-disc list-inside ml-4 mt-1 text-slate-300 space-y-1">
+                            <span class="text-lg font-bold text-[var(--color-warning)] flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" /></svg> WEAKNESSES</span>
+                            <ul class="list-disc list-inside ml-6 mt-2 text-slate-300 space-y-1">
                                 <li>**Revenue Concentration:** Extreme reliance on the **U.S. Federal Government** (~97%), heightening budget sensitivity.</li>
                                 <li>**Legacy Perception:** Ongoing effort to shed the "consulting" legacy to fully compete as a technology integrator.</li>
                             </ul>
@@ -213,16 +265,25 @@
                 <div class="bg-slate-700 p-6 rounded-lg shadow-xl">
                     <h3 class="text-2xl font-bold mb-4 text-slate-300">Competitive Comparison</h3>
                     <div class="space-y-4">
-                        <p class="text-slate-300">
-                            The competitive landscape is dominated by large integrators, each with a slightly different focus:
+                        <p class="text-slate-300 mb-4">
+                            The competitive landscape is dominated by large integrators, each with a slightly different strategic focus:
                         </p>
-                        <ul class="list-disc list-inside ml-4 space-y-2 text-slate-300">
-                            <li>**Leidos:** Greater scale in large IT infrastructure and hardware integration; often manages higher-value, non-services-only contracts.</li>
-                            <li>**CACI:** Highly specialized in rapid delivery of proprietary technology and products, particularly in the Intelligence community.</li>
-                            <li>**SAIC:** Stronger presence in large-scale logistics and platform integration services, offering diversification outside of core strategic consulting.</li>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-start">
+                                <span class="text-slate-500 font-bold mr-2">Leidos:</span>
+                                <span>Greater scale in large IT infrastructure and hardware integration; often manages higher-value, non-services-only contracts.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[var(--color-accent)] font-bold mr-2">CACI:</span>
+                                <span>Highly specialized in rapid delivery of proprietary technology and products, particularly in the Intelligence community.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-500 font-bold mr-2">SAIC:</span>
+                                <span>Stronger presence in large-scale logistics and platform integration services, offering diversification outside of core strategic consulting.</span>
+                            </li>
                         </ul>
-                        <p class="text-sm italic text-slate-400 pt-2 border-t border-slate-600">
-                            All competitors face intense wage inflation and recruiting challenges for top-tier cleared technical talent.
+                        <p class="text-sm italic text-slate-400 pt-4 border-t border-slate-600 mt-4">
+                            <span class="font-bold text-slate-300">Industry-wide Challenge:</span> All competitors face intense wage inflation and recruiting battles for top-tier cleared technical talent.
                         </p>
                     </div>
                 </div>
@@ -255,13 +316,20 @@
             data: revenueData,
             options: {
                 responsive: true,
-                **maintainAspectRatio: false, // CRITICAL FIX: Stops chart from trying to calculate its own height.**
+                maintainAspectRatio: false,
                 plugins: {
                     legend: {
                         display: false,
                     },
-                    title: {
-                        display: false
+                    tooltip: {
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                        callbacks: {
+                            label: function(context) {
+                                return `$${context.parsed.y} Billion`;
+                            }
+                        }
                     }
                 },
                 scales: {
@@ -270,21 +338,30 @@
                         title: {
                             display: true,
                             text: 'Revenue (Billions $)',
-                            color: 'var(--color-text)'
+                            color: '#94a3b8', // slate-400
+                            font: {
+                                size: 12
+                            }
                         },
                         ticks: {
-                            color: 'var(--color-text)'
+                            color: '#cbd5e1', // slate-300
+                            callback: function(value) {
+                                return '$' + value + 'B';
+                            }
                         },
                         grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
+                            color: 'rgba(255, 255, 255, 0.05)'
                         }
                     },
                     x: {
                         ticks: {
-                            color: 'var(--color-text)'
+                            color: '#cbd5e1', // slate-300
+                            font: {
+                                weight: '500'
+                            }
                         },
                         grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
+                            display: false
                         }
                     }
                 }

@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booz Allen Hamilton: The Strategic Flywheel</title>
+    <title>Booz Allen Hamilton vs. SAIC: Strategic Analysis</title>
     <style>
         :root {
             --bah-green: #008E5B;
             --bah-navy: #1a2e40;
             --bah-silver: #A2AAAD;
+            --saic-blue: #004F8B;
             --growth-up: #2e7d32;
+            --growth-down: #c62828;
             --bg-light: #f8f9fa;
             --text-main: #333;
         }
@@ -66,17 +68,17 @@
             color: #555;
         }
 
-        /* TIMELINE (ASCENT) */
-        .timeline-section {
-            padding: 40px;
-            background: #f1f8e9; /* Light green tint */
-        }
-
         .section-header {
             color: var(--bah-navy);
             border-bottom: 2px solid var(--bah-green);
             padding-bottom: 10px;
             margin-bottom: 30px;
+        }
+
+        /* TIMELINE (ASCENT) */
+        .timeline-section {
+            padding: 40px;
+            background: #f1f8e9; /* Light green tint */
         }
 
         .phase-card {
@@ -146,11 +148,6 @@
         .flywheel-part:hover {
             transform: scale(1.05);
             background: rgba(255,255,255,0.15);
-        }
-
-        .flywheel-part h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.1em;
         }
 
         .flywheel-arrow {
@@ -240,26 +237,112 @@
             border: 1px solid #c8e6c9;
         }
 
-        /* LEADERSHIP CONTRAST */
-        .leadership-section {
+        /* COMPARATIVE SECTION STYLES */
+        .comparative-section {
+            margin-top: 0;
+            background: #fafafa;
+            border-top: 4px solid #333;
             padding: 40px;
-            background: #e0f2f1;
+        }
+        
+        .comp-title {
+            text-align: center;
+            color: #333;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .comp-container {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .leader-profile {
-            flex: 1;
-        }
-
-        .leader-contrast {
+        .comp-card {
             flex: 1;
             background: white;
+            border: 1px solid #e0e0e0;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            min-width: 300px;
+        }
+
+        .comp-card.bah { border-top: 5px solid var(--bah-green); }
+        .comp-card.saic { border-top: 5px solid var(--saic-blue); }
+
+        .comp-header {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .bah .comp-header { color: var(--bah-green); }
+        .saic .comp-header { color: var(--saic-blue); }
+
+        .comp-metric {
+            margin-bottom: 20px;
+        }
+
+        .comp-metric strong {
+            display: block;
+            color: #555;
+            font-size: 0.85em;
+            text-transform: uppercase;
+        }
+
+        .comp-metric span {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .comp-metric p {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .comp-stats-box {
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .bah .comp-stats-box { background: #e8f5e9; }
+        .saic .comp-stats-box { background: #f0f4f8; }
+
+        .comp-stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+
+        .vs-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vs-circle {
+            background: #333;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .winner-box {
+            margin-top: 30px;
+            background: #fff3e0;
             padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #b71c1c; /* Contrast Red */
+            border-left: 5px solid #ff9800;
         }
 
         .footer {
@@ -273,8 +356,9 @@
 
         @media (max-width: 768px) {
             .stats-grid { grid-template-columns: 1fr; }
-            .leadership-section { flex-direction: column; }
             .dd-cols { flex-direction: column; }
+            .comp-container { flex-direction: column; }
+            .vs-badge { margin: 10px 0; }
         }
     </style>
 </head>
@@ -422,20 +506,87 @@
                     </ul>
                 </div>
             </div>
-            
         </div>
     </div>
 
-    <div class="leadership-section">
-        <div class="leader-profile">
-            <h3>The Stability Factor</h3>
-            <p><strong>Horacio Rozanski (CEO)</strong></p>
-            <p>Tenure: <strong>10 Years</strong> (2015 – Present)</p>
-            <p><em>"Managed the firm through Vision 2020 and VoLT without major leadership vacuums."</em></p>
+    <div class="comparative-section">
+        <h2 class="comp-title">Tale of Two Strategies: Head-to-Head</h2>
+        
+        <div class="comp-container">
+            
+            <div class="comp-card bah">
+                <div class="comp-header">Booz Allen Hamilton</div>
+                
+                <div class="comp-metric">
+                    <strong>Organization Structure</strong>
+                    <span>Stable Sector Model</span>
+                    <p>Consistent "Civil / Defense / NatSec" structure for 10+ years. Cross-cutting "Tech Groups" feed innovation.</p>
+                </div>
+
+                <div class="comp-metric">
+                    <strong>Type of Work</strong>
+                    <span>"Mission AI" & High-End Consulting</span>
+                    <p>Transitioned from general management consulting to "building tech." Heavy focus on high-margin, cleared Cyber/Intel work.</p>
+                </div>
+
+                <div class="comp-stats-box">
+                    <div class="comp-stat-row">
+                        <span>Revenue:</span>
+                        <strong>$12.0B</strong>
+                    </div>
+                    <div class="comp-stat-row">
+                        <span>Growth (Organic):</span>
+                        <strong style="color: var(--growth-up);">+11.6%</strong>
+                    </div>
+                    <div class="comp-stat-row">
+                        <span>Workforce:</span>
+                        <strong>~35,800</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-badge">
+                <div class="vs-circle">VS</div>
+            </div>
+
+            <div class="comp-card saic">
+                <div class="comp-header">SAIC</div>
+                
+                <div class="comp-metric">
+                    <strong>Organization Structure</strong>
+                    <span>Oscillating Matrix</span>
+                    <p>Shifted from "2 Super Sectors" (2020) to "5 Groups" (2024) back to "3 Groups" (2026). High leadership turnover.</p>
+                </div>
+
+                <div class="comp-metric">
+                    <strong>Type of Work</strong>
+                    <span>Engineering & Integration</span>
+                    <p>Heritage in logistics and systems engineering. Aggressively trying to pivot to "Tech" via M&A (Unisys, SilverEdge).</p>
+                </div>
+
+                <div class="comp-stats-box">
+                    <div class="comp-stat-row">
+                        <span>Revenue:</span>
+                        <strong>~$7.4B</strong>
+                    </div>
+                    <div class="comp-stat-row">
+                        <span>Growth (Organic):</span>
+                        <strong style="color: var(--growth-down);">~2-3% (Flat)</strong>
+                    </div>
+                    <div class="comp-stat-row">
+                        <span>Workforce:</span>
+                        <strong>~24,000</strong>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="leader-contrast">
-            <h4>Contrast: Competitor Volatility</h4>
-            <p>While BAH retained one CEO, peers like SAIC saw 4 CEO transitions in 6 years, leading to "Pendulum" shifts in strategy.</p>
+
+        <div class="winner-box">
+            <h4 style="margin: 0 0 10px 0; color: #e65100;">The "Alpha" Gap</h4>
+            <p style="margin: 0; font-size: 0.95em;">
+                <strong>Why Booz Allen is Winning:</strong> While SAIC spent 6 years restructuring to <em>find</em> growth, Booz Allen spent that time <em>executing</em> a stable strategy ("VoLT"). This allowed BAH to capture the AI/Cyber wave early, resulting in double-digit organic growth, whereas SAIC relies on M&A to boost its top line.
+            </p>
         </div>
     </div>
 

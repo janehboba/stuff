@@ -35,6 +35,11 @@
         .section-heading {
             border-left: 6px solid var(--color-accent);
         }
+        /* Ensure the canvas element itself is responsive inside the container */
+        #revenueChart {
+            width: 100% !important;
+            height: 100% !important;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -58,7 +63,7 @@
             <div class="bg-slate-700/50 p-6 rounded-lg text-center">
                 <div class="text-xl font-medium text-[var(--color-accent)] mb-2">Organizational Chart Placeholder</div>
                 <div class="h-64 border-2 border-dashed border-slate-500 flex items-center justify-center text-slate-400">
-                    [Placeholder for Booz Allen Hamilton organizational chart diagram]
+                    
                 </div>
                 <p class="mt-4 text-sm italic text-slate-400">Replace this area with a formal high-resolution organizational diagram (e.g., Visio/Lucidchart output).</p>
             </div>
@@ -107,9 +112,9 @@
                 Financial Overview & Competitive Revenue
             </h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="bg-slate-700 p-6 rounded-lg shadow-xl">
+                <div class="bg-slate-700 p-6 rounded-lg shadow-xl **h-96**"> 
                     <h3 class="text-xl font-medium mb-4 text-white">FY24 Revenue Comparison (in Billions)</h3>
-                    <canvas id="revenueChart" class="w-full"></canvas>
+                    <canvas id="revenueChart"></canvas>
                 </div>
 
                 <div class="bg-slate-700 p-6 rounded-lg shadow-xl overflow-x-auto">
@@ -250,7 +255,7 @@
             data: revenueData,
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
+                **maintainAspectRatio: false, // CRITICAL FIX: Stops chart from trying to calculate its own height.**
                 plugins: {
                     legend: {
                         display: false,

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booz Allen Hamilton: The Strategic Flywheel</title>
+    <style>
+        :root {
+            --bah-green: #008E5B;
+            --bah-navy: #1a2e40;
+            --bah-silver: #A2AAAD;
+            --growth-up: #2e7d32;
+            --bg-light: #f8f9fa;
+            --text-main: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--bah-navy), #004d40);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            letter-spacing: 1px;
+        }
+
+        header .subtitle {
+            font-size: 1.3em;
+            font-weight: 300;
+            margin-top: 10px;
+            color: var(--bah-green);
+            background: rgba(255,255,255,0.9);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .intro-box {
+            padding: 30px;
+            background: white;
+            border-bottom: 4px solid var(--bah-green);
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* TIMELINE (ASCENT) */
+        .timeline-section {
+            padding: 40px;
+            background: #f1f8e9; /* Light green tint */
+        }
+
+        .phase-card {
+            background: white;
+            border-left: 5px solid var(--bah-green);
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 0 8px 8px 0;
+            position: relative;
+        }
+
+        .phase-card::before {
+            content: '▲';
+            color: var(--bah-green);
+            position: absolute;
+            left: -12px;
+            top: 15px;
+            font-size: 14px;
+        }
+
+        .phase-year {
+            font-weight: bold;
+            color: var(--bah-navy);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .phase-title {
+            font-size: 1.4em;
+            margin: 5px 0 10px 0;
+            color: var(--bah-green);
+        }
+
+        /* FLYWHEEL VISUAL */
+        .flywheel-section {
+            background: var(--bah-navy);
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .flywheel-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .flywheel-part {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid var(--bah-green);
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-shadow: 0 0 15px var(--bah-green);
+        }
+
+        .flywheel-part h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+        }
+
+        .flywheel-arrow {
+            align-self: center;
+            font-size: 2em;
+            color: var(--bah-green);
+        }
+
+        /* STATS GRID */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 40px;
+            background: white;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 8px;
+        }
+
+        .stat-val {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--growth-up);
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* LEADERSHIP */
+        .leadership-section {
+            padding: 40px;
+            background: #e0f2f1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .leader-profile {
+            flex: 1;
+        }
+
+        .leader-contrast {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #b71c1c; /* Contrast Red */
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+            color: #888;
+            border-top: 1px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .leadership-section { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>The Booz Allen Flywheel</h1>
+        <div class="subtitle">Strategy, Stability, & Organic Growth</div>
+    </header>
+
+    <div class="intro-box">
+        While competitors oscillated to find direction, Booz Allen Hamilton executed a decade-long "VoLT" strategy, resulting in industry-leading organic growth and leadership stability.
+    </div>
+
+    <div class="timeline-section">
+        <h2>The Ascent (2019–2026)</h2>
+        
+        <div class="phase-card">
+            <div class="phase-year">2019 – 2021</div>
+            <h3 class="phase-title">Completing "Vision 2020"</h3>
+            <p><strong>Goal:</strong> Transition from "Consultant" to "Essential Technology Partner."</p>
+            <ul>
+                <li><strong>M&A:</strong> Acquired Liberty IT Solutions ($725M) to dominate Health IT.</li>
+                <li><strong>Outcome:</strong> Revenue breaches $7.5B mark.</li>
+            </ul>
+        </div>
+
+        <div class="phase-card">
+            <div class="phase-year">2021 – 2023</div>
+            <h3 class="phase-title">Launching "VoLT"</h3>
+            <p><strong>Strategy:</strong> Velocity, Leadership, Technology.</p>
+            <ul>
+                <li><strong>Conflict:</strong> Won DOJ antitrust lawsuit to acquire EverWatch (Intel/Cyber).</li>
+                <li><strong>Innovation:</strong> Launched $100M Venture Fund for dual-use tech.</li>
+            </ul>
+        </div>
+
+        <div class="phase-card">
+            <div class="phase-year">2024 – 2025</div>
+            <h3 class="phase-title">The "AI First" Surge</h3>
+            <p><strong>Metric:</strong> 11.6% Organic Revenue Growth.</p>
+            <ul>
+                <li><strong>Market:</strong> Stock breaks $150 barrier; Record Backlog of $37B.</li>
+                <li><strong>M&A:</strong> Acquired PAR Government Systems for edge computing.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="flywheel-section">
+        <h2>The Strategic Flywheel</h2>
+        <p>Momentum derived from consistency, not reorganization.</p>
+        
+        <div class="flywheel-container">
+            <div class="flywheel-part">
+                <h3>Mission Heritage</h3>
+                <small>Deep Consulting Roots</small>
+            </div>
+            <div class="flywheel-arrow">➡</div>
+            <div class="flywheel-part">
+                <h3>Tech Investment</h3>
+                <small>AI, Cyber, Ventures</small>
+            </div>
+            <div class="flywheel-arrow">➡</div>
+            <div class="flywheel-part">
+                <h3>Talent Brand</h3>
+                <small>"VoLT" Culture</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-val">+11.6%</div>
+            <div class="stat-label">Organic Revenue Growth (FY25)</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-val">$37B</div>
+            <div class="stat-label">Total Backlog (Record High)</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-val">~11%</div>
+            <div class="stat-label">Adj. EBITDA Margin (Consistent)</div>
+        </div>
+    </div>
+
+    <div class="leadership-section">
+        <div class="leader-profile">
+            <h3>The Stability Factor</h3>
+            <p><strong>Horacio Rozanski (CEO)</strong></p>
+            <p>Tenure: <strong>10 Years</strong> (2015 – Present)</p>
+            <p><em>"Managed the firm through Vision 2020 and VoLT without major leadership vacuums."</em></p>
+        </div>
+        <div class="leader-contrast">
+            <h4>Contrast: Competitor Volatility</h4>
+            <p>While BAH retained one CEO, peers like SAIC saw 4 CEO transitions in 6 years, leading to "Pendulum" shifts in strategy.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Source: Public Financial Filings (10-K, 10-Q) & Strategic Updates (2019-2025).</p>
+    </div>
+</div>
+
+</body>
+</html>

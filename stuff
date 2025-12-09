@@ -72,6 +72,13 @@
             background: #f1f8e9; /* Light green tint */
         }
 
+        .section-header {
+            color: var(--bah-navy);
+            border-bottom: 2px solid var(--bah-green);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
         .phase-card {
             background: white;
             border-left: 5px solid var(--bah-green);
@@ -133,6 +140,12 @@
             justify-content: center;
             padding: 15px;
             box-shadow: 0 0 15px var(--bah-green);
+            transition: transform 0.3s;
+        }
+
+        .flywheel-part:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.15);
         }
 
         .flywheel-part h3 {
@@ -174,13 +187,67 @@
             margin-top: 5px;
         }
 
-        /* LEADERSHIP */
+        /* DEEP DIVE SECTION */
+        .deep-dive-section {
+            padding: 40px; 
+            background: white; 
+            border-top: 1px solid #ddd;
+        }
+
+        .dd-cols {
+            display: flex; 
+            gap: 30px; 
+            flex-wrap: wrap; 
+            margin-top: 20px;
+        }
+
+        .dd-col {
+            flex: 1; 
+            min-width: 300px;
+        }
+
+        .sector-item {
+            margin-bottom: 15px; 
+            background: #f9f9f9; 
+            padding: 15px; 
+            border-left: 4px solid var(--bah-navy);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .leader-table {
+            width: 100%; 
+            border-collapse: collapse; 
+            font-size: 0.9em;
+        }
+
+        .leader-table th {
+            background: var(--bah-navy); 
+            color: white;
+            padding: 10px; 
+            text-align: left;
+        }
+
+        .leader-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .vital-stats {
+            margin-top: 20px; 
+            padding: 15px; 
+            background: #e8f5e9; 
+            border-radius: 5px;
+            border: 1px solid #c8e6c9;
+        }
+
+        /* LEADERSHIP CONTRAST */
         .leadership-section {
             padding: 40px;
             background: #e0f2f1;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 20px;
         }
 
         .leader-profile {
@@ -201,11 +268,13 @@
             font-size: 0.8em;
             color: #888;
             border-top: 1px solid #ddd;
+            background: #f9f9f9;
         }
 
         @media (max-width: 768px) {
             .stats-grid { grid-template-columns: 1fr; }
-            .leadership-section { flex-direction: column; gap: 20px; }
+            .leadership-section { flex-direction: column; }
+            .dd-cols { flex-direction: column; }
         }
     </style>
 </head>
@@ -222,7 +291,7 @@
     </div>
 
     <div class="timeline-section">
-        <h2>The Ascent (2019–2026)</h2>
+        <h2 class="section-header">The Ascent (2019–2026)</h2>
         
         <div class="phase-card">
             <div class="phase-year">2019 – 2021</div>
@@ -289,6 +358,71 @@
         <div class="stat-card">
             <div class="stat-val">~11%</div>
             <div class="stat-label">Adj. EBITDA Margin (Consistent)</div>
+        </div>
+    </div>
+
+    <div class="deep-dive-section">
+        <h2 class="section-header">Deep Dive: The Architecture of Stability</h2>
+        
+        <div class="dd-cols">
+            
+            <div class="dd-col">
+                <h3 style="color: var(--bah-green);">1. Organizational Sectors</h3>
+                
+                <div class="sector-item">
+                    <strong>Civil Sector</strong><br>
+                    <span style="font-size: 0.9em; color: #555;">Leader: Richard Crowe</span><br>
+                    <span style="font-size: 0.85em; color: #777;">Focus: Health IT, Energy, Citizen Services.</span>
+                </div>
+                
+                <div class="sector-item">
+                    <strong>Global Defense Sector</strong><br>
+                    <span style="font-size: 0.9em; color: #555;">Leader: Andrea Inserra</span><br>
+                    <span style="font-size: 0.85em; color: #777;">Focus: DoD, Combatant Commands, Mission AI.</span>
+                </div>
+                
+                <div class="sector-item">
+                    <strong>National Security Sector</strong><br>
+                    <span style="font-size: 0.9em; color: #555;">Leader: Tom Pfeifer</span><br>
+                    <span style="font-size: 0.85em; color: #777;">Focus: Intelligence Community, Cyber, Space.</span>
+                </div>
+            </div>
+
+            <div class="dd-col">
+                <h3 style="color: var(--bah-green);">2. The "VoLT" Architects</h3>
+                <table class="leader-table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Horacio Rozanski</strong></td>
+                        <td>CEO (10+ Years Tenure)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kristine Martin Anderson</strong></td>
+                        <td>COO (Operational Execution)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Matt Calderone</strong></td>
+                        <td>CFO (Capital Strategy)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bill Vass</strong></td>
+                        <td>CTO (Technology Roadmap)</td>
+                    </tr>
+                </table>
+
+                <div class="vital-stats">
+                    <strong>FY2025 Vital Stats:</strong>
+                    <ul style="margin: 10px 0 0 20px;">
+                        <li>Revenue: <strong>$12.0 Billion</strong> (+12.4%)</li>
+                        <li>Organic Growth: <strong>11.6%</strong> (Industry Leader)</li>
+                        <li>Workforce: <strong>~35,800</strong> Employees</li>
+                    </ul>
+                </div>
+            </div>
+            
         </div>
     </div>
 

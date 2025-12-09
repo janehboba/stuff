@@ -3,122 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booz Allen Hamilton Deep Dive</title>
+    <title>Booz Allen Hamilton Executive Deep Dive</title>
     <style>
         /* Define BAH Corporate Colors */
         :root {
             --bah-navy: #004A77; /* Deep Navy Blue */
             --bah-red: #CC0000;  /* Strong Accent Red */
-            --bah-light-blue: #f0f3f7; /* Light background */
+            --bah-light-gray: #f0f3f7; /* Light background */
             --bah-text: #333333;
-            --bah-border: #e0e0e0;
         }
 
-        /* General Styles */
+        /* General Styles for Presentation Vibe */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif; /* A more modern, executive font */
+            line-height: 1.5;
             color: var(--bah-text);
-            background-color: var(--bah-light-blue);
+            background-color: var(--bah-light-gray);
             margin: 0;
             padding: 0;
         }
 
         .container {
             width: 90%;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto;
-            padding: 20px;
+            padding: 40px;
             background-color: #ffffff;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
-            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* High-impact shadow */
+            border-radius: 12px;
         }
 
         /* Typography */
         h1 {
             color: var(--bah-navy);
             text-align: center;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            border-bottom: 4px solid var(--bah-red); /* Thick Red accent line */
-            font-size: 2.4em;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            border-bottom: 6px solid var(--bah-red); /* Dominant Red line */
+            font-size: 2.8em;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
         h2 {
-            color: var(--bah-navy);
-            border-bottom: 1px dashed var(--bah-red);
+            color: var(--bah-red);
             padding-bottom: 10px;
-            margin-top: 25px;
+            margin-top: 30px;
             font-size: 1.8em;
+            border-left: 5px solid var(--bah-navy);
+            padding-left: 15px;
         }
 
-        /* Section Cards */
+        /* Content Blocks (Key Sections) */
         .section {
-            margin-bottom: 35px;
-            padding: 20px;
-            border: 1px solid var(--bah-border);
-            border-radius: 6px;
-            background-color: #ffffff;
-            transition: box-shadow 0.3s ease;
-        }
-        .section:hover {
-            box-shadow: 0 6px 15px rgba(0, 74, 119, 0.2); /* Navy hover effect */
+            margin-bottom: 40px;
+            padding: 25px;
+            border-radius: 8px;
+            background-color: #f8f8f8; /* Soft background for contrast */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
-        /* Key Points & Lists */
-        .key-point {
+        /* Key Performance Indicators/Highlights */
+        .highlight {
             font-weight: bold;
-            color: var(--bah-red); /* Red for direct emphasis */
-            font-size: 1.1em;
+            color: var(--bah-navy);
+            font-size: 1.2em;
             display: block;
-            margin-bottom: 5px;
+            margin: 8px 0;
         }
 
+        /* List Styling for high-level points */
         ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         ul li {
-            padding-left: 20px;
-            margin-bottom: 10px;
-            position: relative;
+            padding: 15px;
+            flex: 1 1 calc(33% - 20px); /* 3 items per row */
+            background-color: #ffffff;
+            border-left: 4px solid var(--bah-red);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
         }
-        ul li::before {
-            content: "•";
-            color: var(--bah-red); /* Red bullets */
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
+        
+        ul.people-list li {
+            flex: 1 1 calc(50% - 20px);
+            border-left: 4px solid var(--bah-navy);
         }
 
-        /* Table Styling */
+        /* Table Styling for Competitive Analysis */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
         th, td {
             border: 1px solid var(--bah-border);
-            padding: 12px 15px;
+            padding: 15px;
             text-align: left;
         }
         th {
-            background-color: var(--bah-navy); /* Navy Blue Header */
+            background-color: var(--bah-navy);
             color: white;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
         }
         tr:nth-child(even) {
-            background-color: #f8f8f8;
+            background-color: #f3f3f3;
         }
         
-        /* Icons */
         .icon {
-            margin-right: 10px;
-            font-size: 1.4em;
-            color: var(--bah-red); /* Red icons for visibility */
+            margin-right: 15px;
+            font-size: 1.5em;
+            color: var(--bah-red); 
         }
     </style>
 </head>
@@ -126,86 +125,77 @@
 
 <div class="container">
 
-    <h1><span class="icon">💻</span> Booz Allen Hamilton Deep Dive: Strategy & Mission</h1>
-    <p style="text-align: center; font-style: italic; color: #555;">Focused on delivering **mission-critical technology** and **consulting services** to the U.S. Federal Government.</p>
+    <h1><span class="icon">📈</span> Executive Summary: Booz Allen Hamilton (BAH)</h1>
+    <p style="text-align: center; font-style: italic; color: var(--bah-navy); font-size: 1.1em;">
+        A century-old firm actively transforming into a **Technology Powerhouse** for the U.S. Federal Mission.
+    </p>
 
     <div class="section">
-        <h2><span class="icon">🏛️</span> 1. Organization Structure: Sector-Based Focus</h2>
-        <p>The firm is structured around dedicated sectors to maintain **deep expertise** and mission relevance within the complex federal market.</p>
+        <h2><span class="icon">🏛️</span> Structure & Core Market Focus</h2>
+        
+        <p class="highlight">BAH operates under a **Sector-Based Model** to ensure mission intimacy and deep domain expertise in its exclusive client base.</p>
+        
+        <ul style="list-style: none; display: flex; justify-content: space-around; padding: 0;">
+            <li style="flex-basis: 30%; text-align: center; background-color: #ffffff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong style="color: var(--bah-red);">DEFENSE:</strong> Force Modernization & C5ISR
+            </li>
+            <li style="flex-basis: 30%; text-align: center; background-color: #ffffff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong style="color: var(--bah-red);">NATIONAL SECURITY:</strong> Cyber & Intelligence
+            </li>
+            <li style="flex-basis: 30%; text-align: center; background-color: #ffffff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong style="color: var(--bah-red);">CIVIL:</strong> Digital Transformation & Health IT
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2><span class="icon">🚀</span> Competitive Strategy: The VoLT Framework</h2>
+        <p>BAH's competition is defined by its strategic pivot to **Technology-Augmented Consulting** via the VoLT strategy:</p>
+
+        <ul style="list-style: none; display: flex; justify-content: space-between; padding: 0;">
+            <li style="flex-basis: 30%;">
+                <strong class="highlight">V - Velocity:</strong> Accelerate deployment of solutions, reducing time-to-mission for high-end tech.
+            </li>
+            <li style="flex-basis: 30%;">
+                <strong class="highlight">L - Leadership:</strong> Establish market dominance in mission-critical technology fields (AI, 5G, Cyber).
+            </li>
+            <li style="flex-basis: 30%;">
+                <strong class="highlight">T - Technology:</strong> Prioritize large-scale engineering contracts over traditional advisory engagements.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2><span class="icon">🛡️</span> Unmatched Differentiation (The Moat)</h2>
+        <p>This is **why** BAH wins and sustains large, long-term government contracts:</p>
         
         <table>
             <tr>
-                <th>Sector</th>
-                <th>Primary Clients</th>
-                <th>Core Focus</th>
+                <th>Barrier to Entry</th>
+                <th>Strategic Value</th>
             </tr>
             <tr>
-                <td><strong>National Security</strong></td>
-                <td>Intelligence Community, Sensitive Agencies</td>
-                <td>Highly classified operations, cyber warfare, data analytics.</td>
+                <td>**Mandatory Security Clearances**</td>
+                <td>Vast workforce with high clearances—a non-negotiable requirement for sensitive Intelligence/Defense missions.</td>
             </tr>
             <tr>
-                <td><strong>Global Defense</strong></td>
-                <td>Department of Defense (DoD), Military Branches</td>
-                <td>Digital battlespace, command and control systems, force modernization.</td>
+                <td>**Singular Federal Focus**</td>
+                <td>Client intimacy and deep understanding of unique government procurement, compliance, and political cycles.</td>
             </tr>
             <tr>
-                <td><strong>Civil Sector</strong></td>
-                <td>DHS, Health, Transportation, Civilian Agencies</td>
-                <td>Large-scale digital transformation, IT modernization, citizen services.</td>
+                <td>**Tech Integration at Scale**</td>
+                <td>Ability to design, build, and integrate bleeding-edge technology directly into complex federal systems (e.g., DoD Cloud).</td>
             </tr>
         </table>
     </div>
 
     <div class="section">
-        <h2><span class="icon">🚀</span> 2. Competition Strategy: The VoLT Framework</h2>
-        <p>BAH competes by transitioning from general consulting to an **advanced technology integrator**, driven by the **Velocity, Leadership, and Technology (VoLT)** strategy.</p>
-
-        <h3>Core Strategy: VoLT Breakdown</h3>
-        <ul>
-            <li><span class="key-point">Velocity:</span> Accelerating the deployment cycle of innovative solutions (e.g., AI integration).</li>
-            <li><span class="key-point">Leadership:</span> Establishing market and intellectual leadership in critical tech domains.</li>
-            <li><span class="key-point">Technology:</span> Prioritizing high-end engineering contracts over traditional advisory services.</li>
-        </ul>
-
-        <h3>Competitive Tactics</h3>
-        <ul>
-            <li>**Contracting Vehicles:** Utilizing long-established, trusted government contract mechanisms for streamlined access.</li>
-            <li>**Acquisition:** Strategic use of Booz Allen Ventures for targeted acquisitions in niche, emerging tech (Quantum, Space).</li>
-            <li>**Tech Focus:** Shifting delivery model to **cybersecurity, AI/ML, and 5G** solutions delivery.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2><span class="icon">💡</span> 3. Core Differentiation & Barrier to Entry</h2>
-        
-        <table style="margin-bottom: 20px;">
-            <tr>
-                <th>Differentiating Factor</th>
-                <th>Strategic Advantage</th>
-            </tr>
-            <tr>
-                <td><strong>High Security Clearances</strong></td>
-                <td>A massive barrier to entry; allows BAH to access and execute the most sensitive, restricted contracts.</td>
-            </tr>
-            <tr>
-                <td><strong>Mission Specialization</strong></td>
-                <td>Unlike generalist firms, 100+ years of focus on the unique demands and culture of the U.S. Federal Government.</td>
-            </tr>
-            <tr>
-                <td><strong>Applied Innovation</strong></td>
-                <td>The capability to apply and integrate bleeding-edge technology directly into mission-critical government systems.</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="section">
-        <h2><span class="icon">👤</span> 4. Key People Driving the Strategy</h2>
-        <p>Leaders guiding the firm's transformation and sector performance:</p>
-        <ul>
-            <li><span class="key-point">Horacio D. Rozanski:</span> Chairman, CEO, and President (Chief architect of the VoLT strategic shift).</li>
-            <li><span class="key-point">Kristine Martin Anderson:</span> Chief Operating Officer (Oversees operational efficiency and strategy execution).</li>
-            <li><span class="key-point">Matt Calderone:</span> Chief Financial Officer (Manages financial health and investment in tech capabilities).</li>
+        <h2><span class="icon">👤</span> Key Executive Leadership</h2>
+        <p>The visionaries driving the firm's transformation and high-value strategy:</p>
+        <ul class="people-list">
+            <li><strong class="highlight">Horacio D. Rozanski:</strong> Chairman, CEO, and President (The architect of the technology-first strategy).</li>
+            <li><strong class="highlight">Kristine Martin Anderson:</strong> Chief Operating Officer (Drives execution and operational efficiency across all sectors).</li>
+            <li><strong class="highlight">Matt Calderone:</strong> Chief Financial Officer (Manages investment strategy for high-growth tech capability acquisition).</li>
         </ul>
     </div>
 
